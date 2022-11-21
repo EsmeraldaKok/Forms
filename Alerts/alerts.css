@@ -1,0 +1,214 @@
+@mi * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+}
+header h3 {
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+header p {
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+}
+form .input-section {
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+form .input-section label {
+  font-weight: 600;
+  padding-bottom: 5px;
+  font-size: 0.8rem;
+}
+form .input-section input {
+  padding: 10px 5px;
+  border: 1px solid rgba(112, 128, 144, 0.74);
+  border-radius: 5px;
+  color: rgb(34, 34, 34);
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(159, 160, 159, 0.767);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*success alert*/
+.success-btn {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.success-btn .button {
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  background-color: rgba(150, 159, 168, 0.37);
+  font-weight: 600;
+  text-decoration: none;
+}
+.success-btn .button:hover {
+  background: #06D85F;
+  color: #fff;
+}
+
+.popup1 {
+  max-width: 390px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  background: rgba(239, 253, 246, 0.801);
+  border: 2px solid green;
+}
+.popup1 h3 {
+  margin-top: 0;
+  color: rgb(18, 179, 71);
+  font-family: "Raleway", sans-serif;
+}
+.popup1 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(39, 82, 42);
+}
+.popup1 .close:hover {
+  color: #06D85F;
+}
+.popup1 .content {
+  color: #06D85F;
+  max-height: 100%;
+  overflow: auto;
+}
+
+/*error alert*/
+.error-btn {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.error-btn .button {
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  background-color: rgba(150, 159, 168, 0.37);
+  font-weight: 600;
+  text-decoration: none;
+}
+.error-btn .button:hover {
+  background: #d81406;
+  color: #fff;
+}
+
+.popup2 {
+  max-width: 390px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  background: rgba(255, 234, 234, 0.801);
+  border: 2px solid rgb(128, 0, 0);
+}
+.popup2 h3 {
+  margin-top: 0;
+  color: rgb(179, 18, 18);
+  font-family: "Raleway", sans-serif;
+}
+.popup2 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(92, 21, 21);
+}
+.popup2 .close:hover {
+  color: #d80606;
+}
+.popup2 .content {
+  color: #d83006;
+  max-height: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    margin: 10px;
+    width: 100%;
+    max-width: 390px;
+  }
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    max-width: 390px;
+  }
+}/*# sourceMappingURL=alerts.css.map */

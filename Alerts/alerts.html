@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" checkbox-range="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" checkbox-range="ie=edge">
+    <title>Forms</title>
+    <link rel="stylesheet" href="alerts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>    
+    
+    <!--Success state-->
+
+    <form class="success-container">
+
+        <header>
+            <h3>Success</h3>
+            <p>If a form is in a success state, it will automatically show any success message blocks.</p>
+        </header>
+
+        <div class="input-section">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="joe@schmoe.com"/>
+        </div>
+
+        <div class="success-btn">
+            <a class="button" href="#popup1">Submit</a>
+        </div>
+        <div id="popup1" class="overlay">
+            <div class="popup1 popup">
+                <h3>Success</h3>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    You’re all signed up for the newsletter
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--Error state-->
+
+    <form class="error-container">
+
+        <header>
+            <h3>Error</h3>
+            <p>If a form is in an error state, it will automatically show any error message blocks.</p>
+        </header>
+
+        <div class="input-section">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="joe@schmoe.com" />
+        </div>
+
+        <div class="error-btn">
+            <a class="button" href="#popup2">Submit</a>
+        </div>
+
+        <div id="popup2" class="overlay">
+            <div class="popup popup2">
+                <h3>Error</h3>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    You can only sign for an account once with a given e-mail address.
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <!--Warning state-->
+
+    <form class="warning-container">
+
+        <header>
+            <h3>Warning</h3>
+            <p>If a form is in a warning state, it will automatically show any warning message blocks.</p>
+        </header>
+
+        <div class="input-section">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="joe@schmoe.com"/>
+        </div>
+
+        <div class="warn-btn">
+            <a class="button" href="#popup3">Submit</a>
+        </div>
+
+        <div id="popup3" class="overlay">
+            <div class="popup3 popup">
+                <h3>Could you check something?</h3>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    That e-mail has been subscribed, but you have not yet clicked the verification link in your e-mail.
+                </div>
+            </div>
+        </div>
+    </form>
+
+<script src="alerts.js"></script>
+</body>
+
+</html>

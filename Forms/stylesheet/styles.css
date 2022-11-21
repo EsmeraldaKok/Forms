@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: white;
+  height: 100vh;
+  margin: 20px 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  width: 100%;
+  max-width: 400px;
+  padding: 0px 12px;
+}
+header h1 {
+  font-weight: 600;
+  color: #3b0172;
+}
+header h3 {
+  padding: 15px 0px;
+  color: #2ad4eb;
+  font-weight: 600;
+}
+header h4 {
+  color: #800080;
+  padding: 10px 10px;
+}
+header p {
+  padding-bottom: 20px;
+  color: #9e39fc;
+  font-weight: 400;
+}
+
+form {
+  padding: 0px 12px;
+}
+
+/*Range slider*/
+.range-slider {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 8px;
+  margin: 0 15px;
+}
+.slider .track {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  border: 1px solid #12d3b3;
+  background-color: #b8f8f0;
+}
+.slider .range {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #12d3b3;
+}
+.slider .thumb {
+  position: absolute;
+  z-index: 3;
+  width: 25px;
+  height: 25px;
+  background-color: #12d3b3;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.slider .thumb.left {
+  left: 25%;
+  transform: translate(-15px, -10px);
+}
+.slider .thumb.right {
+  right: 25%;
+  transform: translate(15px, -10px);
+}
+.slider .thumb.hover {
+  box-shadow: 0 0 0 20px rgba(98, 0, 238, 0.1);
+  background-color: white;
+  border: 4px solid #12d3b3;
+}
+.slider .thumb.active {
+  box-shadow: 0 0 0 40px rgba(0, 222, 238, 0.2);
+  background-color: white;
+  border: 4px solid #12d3b3;
+}
+
+input[type=range] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  height: 10px;
+  width: 100%;
+  opacity: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 25px;
+  height: 25px;
+  border-radius: 0;
+  border: 0 none;
+  background-color: white;
+  -webkit-appearance: none;
+}
+
+/*Toggle Switch*/
+.switch-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.switch-check .switch-on {
+  font-weight: 600;
+  padding: 10px;
+  color: #9e39fc;
+}
+.switch-check .switch-on:first-of-type {
+  color: #12d3b3;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-switch-input-label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  max-width: 100%;
+  height: 50px;
+  background: #12d3b3;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.toggle-switch-input-label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: #b8f8f0;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + .toggle-switch-input-label {
+  background: #9e39fc;
+}
+
+input:checked + .toggle-switch-input-label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.toggle-switch-input-label:active:after {
+  width: 60px;
+}
+
+/*Dropdown*/
+.dropdown-container {
+  margin-bottom: 25px;
+}
+
+.dropdown-select {
+  margin-top: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 15px;
+  background: linear-gradient(230deg, rgb(111, 0, 255) 0%, rgb(174, 0, 255) 100%);
+  color: whitesmoke;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 0 1em 0 rgba(105, 8, 143, 0.2);
+  cursor: pointer;
+}
+.dropdown-select option {
+  color: whitesmoke;
+  background-color: #3b0172;
+  font-family: 600;
+  font-size: medium;
+}
+
+.inverted--container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.inverted-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border: 2px solid #3b0172;
+  border-radius: 10px;
+  background: linear-gradient(230deg, rgb(111, 0, 255) 0%, rgb(174, 0, 255) 100%);
+}
+.inverted-info-container label {
+  font-weight: 400;
+  color: whitesmoke;
+  padding: 10px;
+}
+.inverted-info-container input[type=text] {
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.inverted-info-container .dark-mode {
+  background-color: white;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

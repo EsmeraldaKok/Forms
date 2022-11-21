@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" checkbox-range="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" checkbox-range="ie=edge">
+    <title>Forms</title>
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+
+    <header>
+        <h1>Checkboxes</h1>
+        <h4>A form can contain checkboxes</h4>
+    </header>
+
+    <form class="checkbox-container">
+
+        <!--Range-->
+
+        <header>
+            <h3>Range Slider</h3>
+            <p>A range slider with two handles</p>
+        </header>
+
+         
+        <div class="range-slider">
+            <div class="multi-range-slider">
+                <input type="range" id="input-left" min="0" max="100" value="25">
+                <input type="range" id="input-right" min="0" max="100" value="75">
+
+                <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left"></div>
+                    <div class="thumb right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--switch-->
+
+        <header>
+            <h3>Switch</h3>
+            <p>A Switch that changes color</p>
+        </header>
+
+        <div class="switch-check">
+            <label for="switch" class="switch-on" >OFF</label>
+            <input type="checkbox" id="switch" class="toggle-switch-input" />
+            <label for="switch" class="toggle-switch-input-label"></label>
+            <label class="switch-on">ON</label>
+        </div>
+    </form>
+
+    <!--dropdown form-->
+
+    <header>
+        <h1>Dropdown</h1>
+        <h4>A form can include Dropdowns</h4>
+    </header>
+
+    <form class="dropdown-container">
+
+        <div>
+            <label for="country">Country</label>
+            <select name="countries" id="country" class="dropdown-select">
+                <option value="select">Select Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American-Samoa">American Samoa</option>
+                <option value="Andora">Andora</option>
+            </select>
+        </div>
+    </form>
+
+
+    <!--Inverted Form-->
+        
+    <header>
+        <h1>Inverted</h1>
+        <h4>A form on a dark background may have to invert its color scheme</h4>
+     </header>
+
+    <form class="inverted--container">
+
+        <fieldset class="inverted-info-container">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+
+
+            <input type="checkbox" id="check-terms">
+            <label for="check-terms">I agree to the terms and conditions</label>
+
+            <button type="submit" id="button">Submit</button>
+
+        </fieldset>
+    </form>
+
+
+<script src="forms.js"></script>
+</body>
+</html>
