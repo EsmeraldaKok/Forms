@@ -166,7 +166,7 @@ input[type=checkbox] {
   left: 5px;
   width: 40px;
   height: 40px;
-  background: #b8f8f0;
+  background: whitesmoke;
   border-radius: 90px;
   transition: 0.3s;
 }
@@ -187,6 +187,10 @@ input:checked + .toggle-switch-input-label:after {
 /*Dropdown*/
 .dropdown-container {
   margin-bottom: 25px;
+}
+.dropdown-container .dropdown-label {
+  font-weight: 600;
+  color: #12d3b3;
 }
 
 .dropdown-select {
@@ -213,6 +217,7 @@ input:checked + .toggle-switch-input-label:after {
   font-size: medium;
 }
 
+/*inverted form*/
 .inverted--container {
   max-width: 400px;
   width: 100%;
@@ -233,9 +238,26 @@ input:checked + .toggle-switch-input-label:after {
 }
 .inverted-info-container input[type=text] {
   padding: 10px 15px;
+  border: 1px solid #3b0172;
   border-radius: 20px;
+  color: #12d3b3;
+  background: rgba(175, 160, 189, 0.5254901961);
 }
-.inverted-info-container .dark-mode {
-  background-color: white;
-  color: white;
+.inverted-info-container input[type=text]::-moz-placeholder {
+  color: whitesmoke;
+}
+.inverted-info-container input[type=text]:-ms-input-placeholder {
+  color: whitesmoke;
+}
+.inverted-info-container input[type=text]::placeholder {
+  color: whitesmoke;
+}
+.inverted-info-container input[type=text]::-ms-input-placeholder {
+  color: whitesmoke;
+}
+.inverted-info-container button {
+  align-self: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #3b0172;
 }/*# sourceMappingURL=styles.css.map */

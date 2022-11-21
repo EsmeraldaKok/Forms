@@ -197,7 +197,7 @@ input[type=checkbox]{
     left: 5px;
     width: 40px;
     height: 40px;
-    background: $Color-2;
+    background: whitesmoke;
     border-radius: 90px;
     transition: 0.3s;
   }
@@ -217,8 +217,14 @@ input[type=checkbox]{
   }
   
 /*Dropdown*/
+
 .dropdown-container {
     margin-bottom: 25px;
+
+    .dropdown-label {
+        font-weight: $fontW-medium;
+        color: $Color-1;
+    }
 }
 
 .dropdown-select {
@@ -245,7 +251,8 @@ input[type=checkbox]{
 
     }
   }
-  
+
+  /*inverted form*/
 
 .inverted--container {
     max-width: 400px;
@@ -268,10 +275,24 @@ input[type=checkbox]{
 
     input[type=text] {
         padding: 10px 15px;
+        border: 1px solid $Color;
         border-radius: 20px; 
+        color: $Color-1;
+        background: #afa0bd86;
     }
-    .dark-mode {
-        background-color: invert($color: #000000);
-        color: white;
-      }
+
+    input[type=text]::placeholder {
+        color:whitesmoke;
+    }
+
+    input[type=text]::-ms-input-placeholder {
+        color:whitesmoke;
+    }
+
+    button {
+        align-self: center;
+        padding: 8px 15px;
+        border-radius: 8px;
+        border: 1px solid $Color;
+    }
 }
