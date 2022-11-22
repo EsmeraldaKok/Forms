@@ -62,3 +62,5 @@ inputRight.addEventListener("mouseup", function() {
 	thumbRight.classList.remove("active");
 });
 
+document.addEventListener('touchmove', function (e) {if(e.target.id != 'input-left'){e.preventDefault(); }}, false);
+document.addEventListener('touchmove', function (e) {if(e.target.id != 'input-right'){e.preventDefault(); }}, false);
