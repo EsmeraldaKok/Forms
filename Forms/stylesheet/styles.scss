@@ -18,19 +18,20 @@ rgb(174, 0, 255) 100%);
 
 
 * {
-    box-sizing: padding-box;
+    box-sizing: border-box;
     margin: 0;
 	padding: 0;  
 }
 
 body {
-	display: flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 	justify-content: flex-start;
-	align-items:flex-start;
+	align-items:center;
+    max-width: 500px;
+    width:100%;
     background:white;
-    height: 100vh;
     margin: 20px 15px;
     font-family: $font;
     
@@ -38,11 +39,12 @@ body {
 
 header {
     width: 100%;
-    max-width: 450px;
-    padding: 0px 12px;
+    max-width: 500px;
+    
 
     h1 {
         font-weight: $fontW-medium;
+        font-size:2.8vw;
         color: $Color;
     }
     
@@ -50,17 +52,20 @@ header {
         padding: 15px 0px;
         color:$Color-6;
         font-weight: $fontW-medium;
+        font-size:1.8vw;
     }
 
     h4 {
         color: $Color-4;
         padding: 10px 10px;
+        font-size:1.2vw;
     }
 
     p {
         padding-bottom: 20px;
         color: $Color-3;
         font-weight: $fontW-reg;
+        font-size:1vw;
     }
 }
 
@@ -239,7 +244,7 @@ input[type=range]::-webkit-slider-thumb {
     border: 0;
     outline: 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding: 18px 15px;
     background: $Color-5;
     color: whitesmoke;
@@ -261,7 +266,7 @@ input[type=range]::-webkit-slider-thumb {
   /*inverted form*/
 
 .inverted--container {
-    max-width: 430px;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -333,4 +338,16 @@ input[type=range]::-webkit-slider-thumb {
         color: white;
         content: '\2713';
       }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .inverted-info-container {
+        filter: invert(0%);
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    .inverted-info-container {
+        filter: invert(100%);
+    }
 }
