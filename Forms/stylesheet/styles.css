@@ -315,12 +315,16 @@ form {
   width: 80%;
   max-width: 500px;
 }
+form .radio-header {
+  color: #800080;
+  font-weight: 400;
+  font-size: 1.1vw;
+}
 form .radio-label {
   cursor: pointer;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  margin: 5px;
 }
 form .radio-label .radio-input {
   position: absolute;

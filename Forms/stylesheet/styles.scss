@@ -360,6 +360,11 @@ form {
     width: 80%;
     max-width: 500px;
   
+    .radio-header {
+        color:$Color-4;
+        font-weight: $fontW-reg;
+        font-size: 1.1vw;
+    }
   
   .radio-label {
 
@@ -367,7 +372,6 @@ form {
     font-weight: $fontW-medium;
     position: relative;
     overflow: hidden;
-    margin: 5px;
     
     .radio-input {
 
