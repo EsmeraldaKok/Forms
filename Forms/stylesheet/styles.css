@@ -266,7 +266,12 @@ input[type=range]::-webkit-slider-thumb {
   align-self: center;
   padding: 8px 15px;
   border-radius: 8px;
-  border: 1px solid #3b0172;
+  border: 1px solid whitesmoke;
+  color: #2ad4eb;
+}
+.inverted-info-container button a {
+  text-decoration: none;
+  color: #2ad4eb;
 }
 
 .inverted-form-checkbox {
